@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@google/genai": "^3.6.1",
     "bcrypt": "^6.0.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.11.3",
@@ -27,5 +28,10 @@
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "allowScripts": {
+    "bcrypt@6.0.0": true,
+    "protobufjs@7.6.6": true,
+    "unrs-resolver@1.12.2": true
   }
 }

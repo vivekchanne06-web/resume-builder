@@ -63,6 +63,14 @@ export async function POST(req: NextRequest) {
             status: 200,
         });
 
+        response.cookies.set("token", token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            path: "/",
+            maxAge: 60 * 60, // 1 hour (matches your JWT expiresIn: "1h")
+        });
+
         return response;
 
     } catch (error) {
