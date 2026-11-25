@@ -48,4 +48,6 @@ export interface IResume {
     certifications?: string[];
     createdAt?: Date;
     updatedAt?: Date;
+    jobTitle?: string;
+    experienceLevel?: string;
 }

@@ -17,27 +17,27 @@ const resumeSchema = new mongoose.Schema<IResume>({
     },
     personalInfo: {
         type: {
-                fullname: String,
-                email: String,
-                mobile: String,
-                address:String ,
-                github:String,
-                linkedin: String,
-                portfolio: String,
-                leetcode: String
+            fullname: String,
+            email: String,
+            mobile: String,
+            address: String,
+            github: String,
+            linkedin: String,
+            portfolio: String,
+            leetcode: String
         },
         default: {}
     },
     workExperience: {
         type: [
             {
-            company: String,
-            position: String,
-            startDate: String,
-            endDate: String,
-            description: String,
-        }
-    ],
+                company: String,
+                position: String,
+                startDate: String,
+                endDate: String,
+                description: String,
+            }
+        ],
         default: [],
     },
     projects: {
@@ -69,8 +69,16 @@ const resumeSchema = new mongoose.Schema<IResume>({
     certifications: {
         type: [String],
         default: []
-    }
-},{
+    },
+    jobTitle: {
+        type: String,
+        default: "",
+    },
+    experienceLevel: {
+        type: String,
+        default: "",
+    },
+}, {
     timestamps: true
 });
 
